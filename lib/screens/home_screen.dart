@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 
+import '../components/LLA_app_bar.dart';
+import '../components/LLA_bottom_navigational_bar.dart';
+import '../components/ProgressCard.dart';
+
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
@@ -13,11 +17,7 @@ class _HomeScreenState extends State<HomeScreen> {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
 //! the appbar
-      appBar: AppBar(
-          title: const Text(
-        'L L A',
-        style: TextStyle(fontWeight: FontWeight.w700, color: Colors.indigo),
-      )),
+      appBar: LLAAppBar('L L A'),
 
 //! the body of the scaffold
       body: Center(
@@ -30,18 +30,7 @@ class _HomeScreenState extends State<HomeScreen> {
               SizedBox(
                 height: size.height * 0.4,
                 width: size.width * 0.6,
-                child: const Card(
-                  elevation: 5,
-                  child: Center(
-                    child: Text(
-                      'Today\'s Progress: ',
-                      style: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ),
-                ),
+                child: ProgressCard(),
               ),
               const Row(
                 children: [],
@@ -52,47 +41,13 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
 
 //! the bottom navigational bar
-      bottomNavigationBar: BottomNavigationBar(
-        onTap: (index) {
-          switch (index) {
-            case 0:
-              Navigator.pushNamed(context, '/');
-
-              break;
-            case 1:
-              Navigator.pushNamed(context, '/quiz');
-
-              break;
-            case 2:
-              Navigator.pushNamed(context, '/translator');
-              break;
-          }
-        },
-        items: [
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.home,
-              color: Theme.of(context).colorScheme.secondary,
-            ),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.quiz,
-              color: Theme.of(context).colorScheme.secondary,
-            ),
-            label: 'Quiz',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.camera_alt,
-              color: Theme.of(context).colorScheme.secondary,
-            ),
-            label: 'Translator',
-          ),
-          
-        ],
-      ),
+      bottomNavigationBar: LLABottomNavigationBar(context),
     );
   }
+
+  
+
+  
+  
+
 }
