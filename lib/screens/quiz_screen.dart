@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
+//! components imports
 import 'package:lla/components/LLA_app_bar.dart';
-
 import '../components/LLA_bottom_navigational_bar.dart';
+//! models imports
+import '../models/options_model.dart';
+import '../models/questionsArModel_models.dart';
+import '../models/questions_model.dart';
+import '../utilities/utilities.dart';
 
 class QuizScreen extends StatefulWidget {
   const QuizScreen({super.key});
@@ -11,6 +16,44 @@ class QuizScreen extends StatefulWidget {
 }
 
 class _QuizScreenState extends State<QuizScreen> {
+  bool allQuestionsAnswered = false;
+  //late ArCoreController arCoreController;
+  int correctAnswers = 0;
+  double dailyProgress = 0.0;
+  int totalQuestions = 0;
+
+
+
+//! model classes initialization
+  List<QuestionsModel> questions = Utilities.questionsContentList();
+  List<OptionsModel> options = Utilities.optionsContentList();
+  List<QuestionsARModels> questionARModels =
+      Utilities.questionsArModelContentList();
+  
+  Future<bool> checkAnswer(String selectedOption, String correctAnswer) async {
+    setState(() {
+      if (selectedOption == correctAnswer) {
+        correctAnswers++;
+       // String? arModelUrl = questionARModels[totalQuestions].arLink;
+        //! ??? what is going on here
+        //! why does this accept null values
+       // onLocalObjectButtonPressed(context, arModelUrl);
+      }
+
+      totalQuestions++;
+
+      dailyProgress =
+          totalQuestions > 0 ? correctAnswers / totalQuestions : 0.0;
+
+      if (totalQuestions >= questions.length) {
+        allQuestionsAnswered = true;
+      }
+    });
+
+    return allQuestionsAnswered;
+  }
+
+  
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -59,7 +102,7 @@ class _QuizScreenState extends State<QuizScreen> {
                             questions[totalQuestions].answer);
 
                         if (allQuestionsAnswered) {
-                          navigateToResultPage();
+                       //   navigateToResultPage();
                         }
                       },
                       style: ButtonStyle(
