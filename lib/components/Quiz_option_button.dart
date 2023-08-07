@@ -19,7 +19,7 @@ import '../utilities/constants.dart';
               buttonText,
               style: const TextStyle(
                 fontSize: 18,
-                color: Colors.blue,
+                color: kPrimaryColor,
               ),
             ),
           ),

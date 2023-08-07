@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 
-BottomNavigationBar LLABottomNavigationBar(BuildContext context) {
+BottomNavigationBar LLABottomNavigationBar(BuildContext context, Color homeColor, Color quizColor, Color translatorColor) {
     return BottomNavigationBar(
       onTap: (index) {
         switch (index) {
@@ -23,21 +23,21 @@ BottomNavigationBar LLABottomNavigationBar(BuildContext context) {
         BottomNavigationBarItem(
           icon: Icon(
             Icons.home,
-            color: Theme.of(context).colorScheme.secondary,
+            color: homeColor
           ),
           label: 'Home',
         ),
         BottomNavigationBarItem(
           icon: Icon(
             Icons.quiz,
-            color: Theme.of(context).colorScheme.secondary,
+            color: quizColor
           ),
           label: 'Quiz',
         ),
         BottomNavigationBarItem(
           icon: Icon(
             Icons.camera_alt,
-            color: Theme.of(context).colorScheme.secondary,
+            color: translatorColor
           ),
           label: 'Translator',
         ),

@@ -1,6 +1,7 @@
 // ignore_for_file: file_names, non_constant_identifier_names
 
 import 'package:flutter/material.dart';
+import 'package:lla/utilities/constants.dart';
 
 Container QuizQuestionDisplay(Size size, String quizQuestion) {
   return Container(
@@ -9,7 +10,7 @@ Container QuizQuestionDisplay(Size size, String quizQuestion) {
     padding: const EdgeInsets.all(16.0),
     margin: const EdgeInsets.symmetric(horizontal: 16.0),
     decoration: BoxDecoration(
-      color: Colors.blue,
+      color: kPrimaryColor,
       borderRadius: BorderRadius.circular(10.0),
     ),
     child: Center(

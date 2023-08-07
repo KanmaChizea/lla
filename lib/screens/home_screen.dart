@@ -41,7 +41,7 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
 
 //! the bottom navigational bar
-      bottomNavigationBar: LLABottomNavigationBar(context),
+      bottomNavigationBar: LLABottomNavigationBar(context, Theme.of(context).colorScheme.primary, Theme.of(context).colorScheme.secondary, Theme.of(context).colorScheme.secondary,),
     );
   }
 
