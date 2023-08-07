@@ -30,6 +30,10 @@ SizedBox QuizQuestionsListView(Size size, int tQuestions, int itemCounts) {
                 questions[tQuestions].answer);
 
             //? route them to the AR display Screen
+            //TODO
+            //fess launch the user to the ar screen then 0n completing 
+            //the total length of questions send them to the home screen
+            // that contains the results
             if (allQuestionsAnswered) {
               Navigator.push(
                 context,
