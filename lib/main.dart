@@ -4,6 +4,7 @@ import 'package:lla/screens/quiz_screen.dart';
 import 'package:lla/screens/translator_screen.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
 }
 
