@@ -1,5 +1,6 @@
 // ignore_for_file: file_names
 
+import 'package:augmented_reality_plugin/augmented_reality_plugin.dart';
 import 'package:flutter/material.dart';
 import 'package:lla/components/LLA_app_bar.dart';
 
@@ -39,6 +40,22 @@ class _ARDisplayScreenState extends State<ARDisplayScreen> {
         ),
       
       ]),
+    );
+  }
+}
+
+class AugmentedRealityView extends StatefulWidget {
+  const AugmentedRealityView({Key? key}) : super(key: key);
+
+  @override
+  _AugmentedRealityViewState createState() => _AugmentedRealityViewState();
+}
+
+class _AugmentedRealityViewState extends State<AugmentedRealityView> {
+  @override
+  Widget build(BuildContext context) {
+    return AugmentedRealityPlugin(
+        'https://www.freepnglogos.com/uploads/furniture-png/furniture-png-transparent-furniture-images-pluspng-15.png'
     );
   }
 }

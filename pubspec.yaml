@@ -14,6 +14,8 @@ dependencies:
   cupertino_icons: ^1.0.2
   arcore_flutter_plugin: ^0.1.0
   ar_flutter_plugin: ^0.7.3
+  augmented_reality_plugin: ^4.0.1
+  camera: ^0.10.5+2
 
 dev_dependencies:
   flutter_test:

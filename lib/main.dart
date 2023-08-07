@@ -1,10 +1,20 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:lla/screens/home_screen.dart';
 import 'package:lla/screens/quiz_screen.dart';
 import 'package:lla/screens/translator_screen.dart';
+import 'package:camera/camera.dart';
 
-void main() {
-  WidgetsFlutterBinding.ensureInitialized();
+
+List<CameraDescription> allCameras = [];
+Future<void> main() async {
+  try {
+    WidgetsFlutterBinding.ensureInitialized();
+    allCameras = await availableCameras();
+  } on CameraException catch (errorMessage) {
+    log(errorMessage.description.toString());
+  }
   runApp(const MyApp());
 }
 

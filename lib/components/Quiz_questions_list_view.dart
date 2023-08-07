@@ -34,28 +34,34 @@ SizedBox QuizQuestionsListView(Size size, int tQuestions, int itemCounts) {
             //fess launch the user to the ar screen then 0n completing
             //the total length of questions send them to the home screen
             // that contains the results
-          
-            
-            if (allQuestionsAnswered) {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: (context) => ARDisplayScreen(
-                          isCorrect: true,
-                          answer: questions[tQuestions].answer,
-                          index: tQuestions,
-                        )),
-              );
-            } else {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: (context) => ARDisplayScreen(
-                        isCorrect: false,
-                        answer: questions[tQuestions].answer,
-                        index: tQuestions)),
-              );
-            }
+
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => AugmentedRealityView()
+              ),
+            );
+
+            // if (allQuestionsAnswered) {
+            //   Navigator.push(
+            //     context,
+            //     MaterialPageRoute(
+            //         builder: (context) => ARDisplayScreen(
+            //               isCorrect: true,
+            //               answer: questions[tQuestions].answer,
+            //               index: tQuestions,
+            //             )),
+            //   );
+            // } else {
+            //   Navigator.push(
+            //     context,
+            //     MaterialPageRoute(
+            //         builder: (context) => ARDisplayScreen(
+            //             isCorrect: false,
+            //             answer: questions[tQuestions].answer,
+            //             index: tQuestions)),
+            //   );
+            // }
           },
           options[tQuestions].option[index],
         );
