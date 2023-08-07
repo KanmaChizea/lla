@@ -17,7 +17,7 @@ class _HomeScreenState extends State<HomeScreen> {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
 //! the appbar
-      appBar: LLAAppBar('L L A'),
+      appBar: LLAAppBar('L L A', false),
 
 //! the body of the scaffold
       body: Center(

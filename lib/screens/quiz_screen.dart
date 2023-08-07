@@ -22,22 +22,20 @@ class _QuizScreenState extends State<QuizScreen> {
   double dailyProgress = 0.0;
   int totalQuestions = 0;
 
-
-
 //! model classes initialization
   List<QuestionsModel> questions = Utilities.questionsContentList();
   List<OptionsModel> options = Utilities.optionsContentList();
   List<QuestionsARModels> questionARModels =
       Utilities.questionsArModelContentList();
-  
+
   Future<bool> checkAnswer(String selectedOption, String correctAnswer) async {
     setState(() {
       if (selectedOption == correctAnswer) {
         correctAnswers++;
-       // String? arModelUrl = questionARModels[totalQuestions].arLink;
+        // String? arModelUrl = questionARModels[totalQuestions].arLink;
         //! ??? what is going on here
         //! why does this accept null values
-       // onLocalObjectButtonPressed(context, arModelUrl);
+        // onLocalObjectButtonPressed(context, arModelUrl);
       }
 
       totalQuestions++;
@@ -53,18 +51,18 @@ class _QuizScreenState extends State<QuizScreen> {
     return allQuestionsAnswered;
   }
 
-  
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
 //! the appbar
-     appBar: LLAAppBar('Q U I Z'),
+      appBar: LLAAppBar('Q U I Z', true),
 //!the body of the scaffold
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-           Container(
+          Flexible(
+            child: Container(
               width: size.width * 0.9,
               height: size.height * 0.35,
               padding: const EdgeInsets.all(16.0),
@@ -85,55 +83,52 @@ class _QuizScreenState extends State<QuizScreen> {
                 ),
               ),
             ),
-            const SizedBox(height: 20.0),
-            SizedBox(
-              height: size.height * 0.45,
-              child: ListView.builder(
-                itemCount: options.length - 1,
-                // itemExtent: options.length.toDouble() - 1,
-                itemBuilder: (context, index) {
-                  return Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    //TODO: make this buttons white
-                    child: ElevatedButton(
-                      onPressed: () async {
-                        bool allQuestionsAnswered = await checkAnswer(
-                            options[totalQuestions].option[index],
-                            questions[totalQuestions].answer);
+          ),
+          const SizedBox(height: 20.0),
+          SizedBox(
+            height: size.height * 0.45,
+            child: ListView.builder(
+              itemCount: options.length - 1,
+              itemBuilder: (context, index) {
+                return Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: ElevatedButton(
+                    onPressed: () async {
+                      bool allQuestionsAnswered = await checkAnswer(
+                          options[totalQuestions].option[index],
+                          questions[totalQuestions].answer);
 
-                        if (allQuestionsAnswered) {
-                       //   navigateToResultPage();
-                        }
-                      },
-                      style: ButtonStyle(
-                          backgroundColor:
-                              MaterialStateProperty.all(Colors.white),
-                          padding: MaterialStateProperty.all(
-                              const EdgeInsets.all(4)),
-                          textStyle: MaterialStateProperty.all(
-                              const TextStyle(fontSize: 20))),
-                      child: SizedBox(
-                        width: size.width * 0.7,
-                        height: size.height * 0.1,
-                        child: Center(
-                          child: Text(
-                            options[totalQuestions].option[index],
-                            style: const TextStyle(
-                                fontSize: 18, color: Colors.blue),
-                          ),
+                      if (allQuestionsAnswered) {
+                        //   navigateToResultPage();
+                      }
+                    },
+                    style: ButtonStyle(
+                        backgroundColor:
+                            MaterialStateProperty.all(Colors.white),
+                        padding:
+                            MaterialStateProperty.all(const EdgeInsets.all(4)),
+                        textStyle: MaterialStateProperty.all(
+                            const TextStyle(fontSize: 20))),
+                    child: SizedBox(
+                      width: size.width * 0.7,
+                      height: size.height * 0.07,
+                      child: Center(
+                        child: Text(
+                          options[totalQuestions].option[index],
+                          style:
+                              const TextStyle(fontSize: 18, color: Colors.blue),
                         ),
                       ),
                     ),
-                  );
-                },
-              ),
+                  ),
+                );
+              },
             ),
-          
-
-        ],),
+          ),
+        ],
+      ),
 //! the bottom navigational bar
       bottomNavigationBar: LLABottomNavigationBar(context),
-    
     );
   }
 }
