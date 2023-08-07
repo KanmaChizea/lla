@@ -38,8 +38,10 @@ SizedBox QuizQuestionsListView(Size size, int tQuestions, int itemCounts) {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => AugmentedRealityView()
-              ),
+                  builder: (context) => const AugmentedRealityView(
+                        arLink:
+                            'https://www.freepnglogos.com/uploads/furniture-png/furniture-png-transparent-furniture-images-pluspng-15.png',
+                      )),
             );
 
             // if (allQuestionsAnswered) {

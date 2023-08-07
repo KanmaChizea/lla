@@ -29,7 +29,7 @@ class _ARDisplayScreenState extends State<ARDisplayScreen> {
 
   @override
   Widget build(BuildContext context) {
-     return Scaffold(
+    return Scaffold(
       appBar: LLAAppBar('A R View', true),
       body: Column(crossAxisAlignment: CrossAxisAlignment.center, children: [
         Text(
@@ -38,14 +38,15 @@ class _ARDisplayScreenState extends State<ARDisplayScreen> {
               : 'you got the answer wrongly',
           style: const TextStyle(fontSize: 25, fontWeight: FontWeight.w700),
         ),
-      
       ]),
     );
   }
 }
 
 class AugmentedRealityView extends StatefulWidget {
-  const AugmentedRealityView({Key? key}) : super(key: key);
+  const AugmentedRealityView({required this.arLink, Key? key})
+      : super(key: key);
+  final String arLink;
 
   @override
   _AugmentedRealityViewState createState() => _AugmentedRealityViewState();
@@ -54,8 +55,6 @@ class AugmentedRealityView extends StatefulWidget {
 class _AugmentedRealityViewState extends State<AugmentedRealityView> {
   @override
   Widget build(BuildContext context) {
-    return AugmentedRealityPlugin(
-        'https://www.freepnglogos.com/uploads/furniture-png/furniture-png-transparent-furniture-images-pluspng-15.png'
-    );
+    return AugmentedRealityPlugin(widget.arLink);
   }
 }
