@@ -58,14 +58,21 @@ class _WelcomeScreenState extends ConsumerState<WelcomeScreen> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const Text('App logo'),
+                      Container(
+                        height: 70,
+                        width: 70,
+                        decoration: const BoxDecoration(
+                          shape: BoxShape.circle,
+                          image: DecorationImage(
+                            image: AssetImage('assets/icons/applogo.png'),
+                          ),
+                        ),
+                      ),
                       AppSpacing.space8,
                       const Text(
                         'Welcome to LLA',
                         style: AppTextstyles.h1Bold,
                       ),
-                      AppSpacing.space14,
-                      AppSpacing.space24,
                       AppSpacing.space24,
                       AppSpacing.space24,
                       const Text(

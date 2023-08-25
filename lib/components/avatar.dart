@@ -11,7 +11,7 @@ class Avatar extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final size = (MediaQuery.of(context).size.width - 104) / 4;
+    final size = (MediaQuery.of(context).size.width - 80) / 4;
     return Container(
         width: size,
         height: size,
@@ -21,6 +21,8 @@ class Avatar extends ConsumerWidget {
           border:
               selected ? Border.all(color: AppColors.purple, width: 3) : null,
         ),
-        child: SvgPicture.asset('assets/images/$avi.svg'));
+        child: SvgPicture.asset(
+          'assets/images/$avi.svg',
+        ));
   }
 }
