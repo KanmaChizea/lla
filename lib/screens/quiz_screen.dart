@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 //! components imports
 import 'package:lla/components/LLA_app_bar.dart';
-import '../components/LLA_bottom_navigational_bar.dart';
 import '../components/Quiz_question_display.dart';
 import '../components/Quiz_questions_list_view.dart';
 //! models imports
@@ -31,8 +30,6 @@ class _QuizScreenState extends State<QuizScreen> {
   List<QuestionsARModels> questionARModels =
       Utilities.questionsArModelContentList();
 
-  
-
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -50,13 +47,14 @@ class _QuizScreenState extends State<QuizScreen> {
             ),
           ),
           kMediumSizedBoxSpace,
-          QuizQuestionsListView(size,  totalQuestions,  options.length - 1,),
+          QuizQuestionsListView(
+            size,
+            totalQuestions,
+            options.length - 1,
+          ),
         ],
       ),
 //! the bottom navigational bar
-      bottomNavigationBar: LLABottomNavigationBar(context,   Theme.of(context).colorScheme.secondary, Theme.of(context).colorScheme.primary, Theme.of(context).colorScheme.secondary,),
     );
   }
-
-  
 }
