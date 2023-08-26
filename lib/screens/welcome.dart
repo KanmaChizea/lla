@@ -141,9 +141,10 @@ class _WelcomeScreenState extends ConsumerState<WelcomeScreen> {
                                 if (formKey.currentState!.validate()) {
                                   if (image.isEmpty) {
                                     ScaffoldMessenger.of(context)
-                                        .showSnackBar(const SnackBar(
-                                      content: Text('Please select an avatar'),
-                                      backgroundColor: Colors.red,
+                                        .showSnackBar(SnackBar(
+                                      content:
+                                          const Text('Please select an avatar'),
+                                      backgroundColor: Colors.red.shade700,
                                     ));
                                   } else {
                                     final user = User(

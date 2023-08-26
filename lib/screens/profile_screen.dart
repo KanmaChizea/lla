@@ -39,32 +39,37 @@ class ProfileScreen extends ConsumerWidget {
             AppSpacing.space24,
             AppSpacing.space24,
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).pushNamed('/edit_profile');
+              },
               child: const Text('Edit profile'),
             ),
             AppSpacing.space24,
             ElevatedButton(
               onPressed: () {
                 showDialog(
-                    context: context,
-                    builder: (context) => AlertDialog(
-                          title: const Text('Logout'),
-                          content: const Text(
-                              'Logging out means you will lose all user data. Do you want to continue?'),
-                          actions: [
-                            TextButton(
-                                onPressed: () {
-                                  Navigator.pop(context);
-                                },
-                                child: const Text('NO')),
-                            TextButton(
-                                onPressed: () {
-                                  Navigator.of(context).pushNamedAndRemoveUntil(
-                                      '/welcome', (route) => false);
-                                },
-                                child: const Text('LOGOUT')),
-                          ],
-                        ));
+                  context: context,
+                  builder: (context) => AlertDialog(
+                    title: const Text('Logout'),
+                    content: const Text(
+                        'Logging out means you will lose all user data. Do you want to continue?'),
+                    actions: [
+                      TextButton(
+                          onPressed: () {
+                            Navigator.pop(context);
+                          },
+                          child: const Text('NO')),
+                      TextButton(
+                        onPressed: () {
+                          ref.read(userProvider.notifier).delete();
+                          Navigator.of(context).pushNamedAndRemoveUntil(
+                              '/welcome', (route) => false);
+                        },
+                        child: const Text('LOGOUT'),
+                      ),
+                    ],
+                  ),
+                );
               },
               style: Theme.of(context).elevatedButtonTheme.style?.copyWith(
                   backgroundColor:

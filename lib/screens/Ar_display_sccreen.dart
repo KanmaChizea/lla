@@ -1,7 +1,9 @@
 // ignore_for_file: file_names
 
+import 'package:arcore_flutter_plugin/arcore_flutter_plugin.dart';
 import 'package:augmented_reality_plugin/augmented_reality_plugin.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:lla/components/LLA_app_bar.dart';
 
 import '../models/questionsArModel_models.dart';
@@ -56,5 +58,23 @@ class _AugmentedRealityViewState extends State<AugmentedRealityView> {
   @override
   Widget build(BuildContext context) {
     return AugmentedRealityPlugin(widget.arLink);
+  }
+}
+
+class Try extends ConsumerStatefulWidget {
+  const Try({super.key});
+
+  @override
+  ConsumerState<ConsumerStatefulWidget> createState() => _TryState();
+}
+
+class _TryState extends ConsumerState<Try> {
+  @override
+  Widget build(BuildContext context) {
+    return ArCoreView(onArCoreViewCreated: (controller) {
+      controller.addArCoreNode(
+        ArCoreReferenceNode(objectUrl: ''),
+      );
+    });
   }
 }

@@ -25,4 +25,10 @@ class UserNotifier extends StateNotifier<AsyncValue<User?>> {
     await sharedPref.setString('user', user.toJson());
     state = AsyncData(user);
   }
+
+  delete() async {
+    final sharedPref = await SharedPreferences.getInstance();
+    await sharedPref.remove('user');
+    state = const AsyncData(null);
+  }
 }

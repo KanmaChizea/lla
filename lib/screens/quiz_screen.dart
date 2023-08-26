@@ -1,14 +1,7 @@
 import 'package:flutter/material.dart';
-//! components imports
-import 'package:lla/components/LLA_app_bar.dart';
-import '../components/Quiz_question_display.dart';
-import '../components/Quiz_questions_list_view.dart';
-//! models imports
-import '../models/options_model.dart';
-import '../models/questionsArModel_models.dart';
-import '../models/questions_model.dart';
-import '../utilities/constants.dart';
-import '../utilities/utilities.dart';
+import 'package:lla/styles/colors.dart';
+import 'package:lla/styles/spacing.dart';
+import 'package:lla/styles/textstyles.dart';
 
 class QuizScreen extends StatefulWidget {
   const QuizScreen({super.key});
@@ -18,43 +11,77 @@ class QuizScreen extends StatefulWidget {
 }
 
 class _QuizScreenState extends State<QuizScreen> {
-  bool allQuestionsAnswered = false;
-  //late ArCoreController arCoreController;
-  int correctAnswers = 0;
-  double dailyProgress = 0.0;
-  int totalQuestions = 0;
-
-//! model classes initialization
-  List<QuestionsModel> questions = Utilities.questionsContentList();
-  List<OptionsModel> options = Utilities.optionsContentList();
-  List<QuestionsARModels> questionARModels =
-      Utilities.questionsArModelContentList();
-
+  String? selected;
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
     return Scaffold(
-//! the appbar
-      appBar: LLAAppBar('Q U I Z', true),
-//!the body of the scaffold
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Flexible(
-            child: QuizQuestionDisplay(
-              size,
-              questions[totalQuestions].question,
-            ),
-          ),
-          kMediumSizedBoxSpace,
-          QuizQuestionsListView(
-            size,
-            totalQuestions,
-            options.length - 1,
-          ),
-        ],
+      appBar: AppBar(
+        title: const Text('Quiz'),
       ),
-//! the bottom navigational bar
+      body: Padding(
+        padding: AppSpacing.appPadding.copyWith(top: 0),
+        child: Column(
+          children: [
+            const Text(
+              'Select your preferred language and immerse yourself in an exciting quiz experience.\nGet ready to identify objects that will be projected into your world through Augmented Reality. This quiz will test your language skills as you identify these objects in the language you\'ve chosen.',
+              style: AppTextstyles.caption,
+            ),
+            AppSpacing.space24,
+            AppSpacing.space14,
+            Container(
+              padding: const EdgeInsets.symmetric(horizontal: 16),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(12),
+                border: Border.all(
+                  color: Theme.of(context).brightness == Brightness.light
+                      ? AppColors.black
+                      : AppColors.white,
+                ),
+              ),
+              child: DropdownButtonHideUnderline(
+                child: DropdownButton(
+                    value: selected,
+                    hint: const Text(
+                      'Select language',
+                      style: AppTextstyles.bodyRegular,
+                    ),
+                    icon: const Icon(Icons.keyboard_arrow_down),
+                    iconSize: 36,
+                    isExpanded: true,
+                    items: ['Hausa', 'Igbo', 'Yoruba'].map((String items) {
+                      return DropdownMenuItem(
+                        value: items,
+                        child: Text(
+                          items,
+                          style: AppTextstyles.caption,
+                        ),
+                      );
+                    }).toList(),
+                    onChanged: (String? newValue) {
+                      setState(() {
+                        selected = newValue;
+                      });
+                    }),
+              ),
+            ),
+            const Spacer(),
+            ElevatedButton(
+              onPressed: () {
+                if (selected == null) {
+                  ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                    content: const Text('Please select a language to start'),
+                    backgroundColor: Colors.red.shade700,
+                  ));
+                } else {
+                  Navigator.of(context)
+                      .pushNamed('/start_quiz', arguments: selected);
+                }
+              },
+              child: const Text('Start'),
+            )
+          ],
+        ),
+      ),
     );
   }
 }

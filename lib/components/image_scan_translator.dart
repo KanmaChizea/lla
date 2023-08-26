@@ -223,10 +223,10 @@ class _ImageDetectedWidgetState extends ConsumerState<ImageDetectedWidget> {
                                           ref.read(languageProvider)!);
                                 } else {
                                   ScaffoldMessenger.of(context)
-                                      .showSnackBar(const SnackBar(
-                                    content:
-                                        Text('Please select a language first'),
-                                    backgroundColor: Colors.red,
+                                      .showSnackBar(SnackBar(
+                                    content: const Text(
+                                        'Please select a language first'),
+                                    backgroundColor: Colors.red.shade700,
                                   ));
                                 }
                               },
