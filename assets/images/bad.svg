@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<!-- ClipArt by Arvin61r58 (http://openclipart.org/user-detail/Arvin61r58) -->
+<!-- ClipArt by srikanth.karana (https://openclipart.org/user-detail/srikanth.karana) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   id="svg8"
+   version="1.1"
+   viewBox="0 0 115.09375 115.09375"
+   height="435"
+   width="435">
+  <title
+     id="title4503">Sad Emoji</title>
+  <defs
+     id="defs2">
+    <linearGradient
+       id="linearGradient4585">
+      <stop
+         stop-color="#eac508"
+         offset="0"
+         id="stop4569" />
+      <stop
+         stop-color="#eac508"
+         offset="0.142857"
+         id="stop4571" />
+      <stop
+         stop-color="#efbc10"
+         offset="0.25932825"
+         id="stop4573" />
+      <stop
+         stop-color="#f3b418"
+         offset="0.53106415"
+         id="stop4575" />
+      <stop
+         stop-color="#f8ab21"
+         offset="0.75209665"
+         id="stop4577" />
+      <stop
+         stop-color="#ff9f2d"
+         offset="0.92042607"
+         id="stop4581" />
+      <stop
+         stop-color="#ff9f2d"
+         offset="1"
+         id="stop4583" />
+    </linearGradient>
+    <radialGradient
+       gradientTransform="matrix(0.21066973,0.97755729,-0.95152067,0.20505868,286.55846,-54.405698)"
+       gradientUnits="userSpaceOnUse"
+       r="62.762943"
+       fy="151.47917"
+       fx="63.877968"
+       cy="151.47917"
+       cx="63.877968"
+       id="radialGradient4645"
+       xlink:href="#linearGradient4585" />
+  </defs>
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Sad Emoji</dc:title>
+        <cc:license
+           rdf:resource="http://creativecommons.org/publicdomain/zero/1.0/" />
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Arvin61r58</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:publisher>
+          <cc:Agent>
+            <dc:title>Openclipart.org</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+        <dc:identifier>https://openclipart.org/</dc:identifier>
+        <dc:source>https://openclipart.org/user-detail/Arvin61r58</dc:source>
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>smiley</rdf:li>
+            <rdf:li>frown</rdf:li>
+            <rdf:li>emoticon</rdf:li>
+            <rdf:li>emoji</rdf:li>
+            <rdf:li>sad</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+        <dc:description>frown emoji</dc:description>
+        <dc:contributor>
+          <cc:Agent>
+            <dc:title>srikanth.karana
+https://openclipart.org/user-detail/srikanth.karana
+https://openclipart.org/detail/280979/zerosmiley</dc:title>
+          </cc:Agent>
+        </dc:contributor>
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/publicdomain/zero/1.0/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="g4745"
+     transform="matrix(0.90151518,0,0,0.90151518,-111.60446,1.1703382)"
+     style="stroke-width:1.10924363">
+    <circle
+       r="62.36607"
+       cy="62.535316"
+       cx="187.63005"
+       id="path4485"
+       style="opacity:1;fill:url(#radialGradient4645);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.88046211;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <g
+       id="g4737"
+       style="stroke-width:1.10924363">
+      <g
+         id="g4731"
+         style="stroke-width:1.10924363">
+        <ellipse
+           ry="6.5242147"
+           rx="4.4364662"
+           cy="39.735817"
+           cx="163.31297"
+           id="path4649"
+           style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.88046211;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+        <ellipse
+           style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.88046211;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="ellipse4651"
+           cx="211.94711"
+           cy="39.735817"
+           rx="4.4364662"
+           ry="6.5242147" />
+      </g>
+      <path
+         style="opacity:1;fill:#920000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.88046187;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 187.62965,77.444202 a 22.150769,13.596913 0 0 0 -22.15054,13.59707 22.150769,13.596913 0 0 0 0.77464,3.54696 22.150769,13.596913 0 0 1 21.3759,-10.09447 22.150769,13.596913 0 0 1 21.37669,10.05013 22.150769,13.596913 0 0 0 0.77465,-3.50262 22.150769,13.596913 0 0 0 -22.15134,-13.59707 z"
+         id="path4675" />
+    </g>
+  </g>
+</svg>

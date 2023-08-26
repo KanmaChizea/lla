@@ -1,18 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:lla/providers/providers.dart';
+import 'package:lla/screens/ar_screen.dart';
 import 'package:lla/screens/class.dart';
 import 'package:lla/screens/edit_profile_screen.dart';
 import 'package:lla/screens/home_screen.dart';
 import 'package:lla/screens/loading.dart';
 import 'package:lla/screens/profile_screen.dart';
+import 'package:lla/screens/quiz_complete.dart';
 import 'package:lla/screens/quiz_screen.dart';
+import 'package:lla/screens/review_quiz.dart';
 import 'package:lla/screens/start_quiz.dart';
 import 'package:lla/screens/translator_screen.dart';
 import 'package:lla/screens/welcome.dart';
 import 'package:lla/styles/theme.dart';
 
-void main() {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   runApp(const ProviderScope(child: MyApp()));
 }
@@ -39,6 +42,9 @@ class MyApp extends ConsumerWidget {
         '/profile': (context) => const ProfileScreen(),
         '/start_quiz': (context) => const StartQuiz(),
         '/edit_profile': (context) => const EditProfileScreen(),
+        '/quiz_complete': (context) => const QuizComplete(),
+        '/review_quiz': (context) => const ReviewQuiz(),
+        '/ar_screen': (context) => const ArScreen(),
       },
     );
   }

@@ -1,6 +1,8 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:lla/models/quiz_state.dart';
 import 'package:lla/models/user.dart';
 import 'package:lla/providers/notifiers/image_translator_notifier.dart';
+import 'package:lla/providers/notifiers/quiz_notifier.dart';
 import 'package:lla/providers/notifiers/theme_notifer.dart';
 import 'package:lla/providers/notifiers/text_translator_notifier.dart';
 import 'package:lla/providers/notifiers/user_notifier.dart';
@@ -26,4 +28,8 @@ final imageTranslatorProvider = StateNotifierProvider<ImageTranslatorNotifier,
 
 final languageProvider = StateProvider<String?>((ref) {
   return null;
+});
+
+final quizProvider = StateNotifierProvider<QuizNotifier, QuizState>((ref) {
+  return QuizNotifier();
 });

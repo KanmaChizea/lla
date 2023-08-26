@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:lla/providers/providers.dart';
 import 'package:lla/styles/colors.dart';
 import 'package:lla/styles/spacing.dart';
 import 'package:lla/styles/textstyles.dart';
@@ -65,20 +67,23 @@ class _QuizScreenState extends State<QuizScreen> {
               ),
             ),
             const Spacer(),
-            ElevatedButton(
-              onPressed: () {
-                if (selected == null) {
-                  ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                    content: const Text('Please select a language to start'),
-                    backgroundColor: Colors.red.shade700,
-                  ));
-                } else {
-                  Navigator.of(context)
-                      .pushNamed('/start_quiz', arguments: selected);
-                }
-              },
-              child: const Text('Start'),
-            )
+            Consumer(builder: (context, ref, child) {
+              return ElevatedButton(
+                onPressed: () {
+                  if (selected == null) {
+                    ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                      content: const Text('Please select a language to start'),
+                      backgroundColor: Colors.red.shade700,
+                    ));
+                  } else {
+                    ref.read(quizProvider.notifier).getQuiz(selected!);
+                    Navigator.of(context)
+                        .pushNamed('/start_quiz', arguments: selected);
+                  }
+                },
+                child: const Text('Start'),
+              );
+            })
           ],
         ),
       ),

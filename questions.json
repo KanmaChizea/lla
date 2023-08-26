@@ -1,3 +1,22 @@
 {
-    "questions":{}
+    "questions":[
+        {
+       "question":"What is this animal commonly referred to as?",
+       "answer":"Duck",
+       "options":["Fish", "Girrafe", "Duck", "Swan"],
+       "arImage":"https://github.com/KhronosGroup/glTF-Sample-Models/blob/master/1.0/Duck/glTF/Duck.gltf"
+    },
+        {
+       "question":"Identify this object?",
+       "answer":"Box",
+       "options":["Box", "Container", "Komkom", "Bucket"],
+       "arImage":"https://github.com/KhronosGroup/glTF-Sample-Models/blob/master/1.0/Box/glTF/Box.gltf"
+    },
+        {
+       "question":"What fruit is this?",
+       "answer":"Avocado",
+       "options":["Apple", "Pear", "Banana", "Avocado"],
+       "arImage":"https://github.com/KhronosGroup/glTF-Sample-Models/blob/master/1.0/Avocado/glTF/Avocado.gltf"
+    }
+]
 }

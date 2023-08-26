@@ -26,10 +26,12 @@ class TranslatorScreen extends ConsumerWidget {
                 Tab(text: 'IMAGE SCAN'),
               ]),
         ),
-        body: const TabBarView(children: [
-          TextInputTranslator(),
-          ImageScanTranslator(),
-        ]),
+        body: const TabBarView(
+          children: [
+            TextInputTranslator(),
+            ImageScanTranslator(),
+          ],
+        ),
       ),
     );
   }

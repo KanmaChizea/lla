@@ -9,6 +9,7 @@ ThemeData lightTheme = ThemeData(
   inputDecorationTheme: textField,
   elevatedButtonTheme: elevatedButton,
   appBarTheme: appbar,
+  outlinedButtonTheme: outlinedButton,
 );
 
 ThemeData darkTheme = ThemeData(
@@ -19,6 +20,7 @@ ThemeData darkTheme = ThemeData(
   inputDecorationTheme: textFieldDark,
   elevatedButtonTheme: elevatedButtonDark,
   appBarTheme: appbar.copyWith(foregroundColor: AppColors.white),
+  outlinedButtonTheme: outlinedButtonDark,
 );
 const appbar = AppBarTheme(
   centerTitle: false,
@@ -67,7 +69,18 @@ final textFieldDark = InputDecorationTheme(
 
 final elevatedButton = ElevatedButtonThemeData(
   style: ButtonStyle(
-    backgroundColor: const MaterialStatePropertyAll(AppColors.darkPurple),
+    foregroundColor: MaterialStateProperty.resolveWith((states) {
+      if (states.contains(MaterialState.disabled)) {
+        return Colors.grey.shade700;
+      }
+      return AppColors.white;
+    }),
+    backgroundColor: MaterialStateProperty.resolveWith((states) {
+      if (states.contains(MaterialState.disabled)) {
+        return Colors.grey.shade400;
+      }
+      return AppColors.darkPurple;
+    }),
     minimumSize: const MaterialStatePropertyAll(Size.fromHeight(50)),
     shape: MaterialStatePropertyAll(
       RoundedRectangleBorder(
@@ -78,8 +91,50 @@ final elevatedButton = ElevatedButtonThemeData(
 );
 final elevatedButtonDark = ElevatedButtonThemeData(
   style: ButtonStyle(
-    backgroundColor: const MaterialStatePropertyAll(AppColors.purple),
+    foregroundColor: MaterialStateProperty.resolveWith((states) {
+      if (states.contains(MaterialState.disabled)) {
+        return Colors.grey.shade700;
+      }
+      return AppColors.white;
+    }),
+    backgroundColor: MaterialStateProperty.resolveWith((states) {
+      if (states.contains(MaterialState.disabled)) {
+        return Colors.grey.shade400;
+      }
+      return AppColors.purple;
+    }),
     minimumSize: const MaterialStatePropertyAll(Size.fromHeight(50)),
+    shape: MaterialStatePropertyAll(
+      RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(12),
+      ),
+    ),
+  ),
+);
+final outlinedButton = OutlinedButtonThemeData(
+  style: ButtonStyle(
+    foregroundColor: const MaterialStatePropertyAll(AppColors.darkPurple),
+    minimumSize: const MaterialStatePropertyAll(Size.fromHeight(50)),
+    side: const MaterialStatePropertyAll(
+      BorderSide(
+        color: AppColors.darkPurple,
+        width: 1.5,
+      ),
+    ),
+    shape: MaterialStatePropertyAll(
+      RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(12),
+      ),
+    ),
+  ),
+);
+final outlinedButtonDark = OutlinedButtonThemeData(
+  style: ButtonStyle(
+    foregroundColor: const MaterialStatePropertyAll(AppColors.purple),
+    minimumSize: const MaterialStatePropertyAll(Size.fromHeight(50)),
+    side: const MaterialStatePropertyAll(
+      BorderSide(color: AppColors.purple, width: 1.5),
+    ),
     shape: MaterialStatePropertyAll(
       RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(12),

@@ -47,7 +47,7 @@ class Quiz {
     return Quiz(
       question: map['question'] as String,
       answer: map['answer'] as String,
-      options: List<String>.from((map['options'] as List<String>)),
+      options: List<String>.from((map['options'] as List)),
       selectedOption: map['selectedOption'] != null
           ? map['selectedOption'] as String
           : null,

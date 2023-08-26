@@ -46,7 +46,19 @@ class _TextInputTranslatorState extends ConsumerState<TextInputTranslator> {
               if (ref.read(languageProvider) != null) {
                 if (value.isEmpty) {
                   ref.read(textTranslatorProvider.notifier).clear();
-                } else {}
+                } else {
+                  ref
+                      .read(textTranslatorProvider.notifier)
+                      .translate(value, ref.read(languageProvider)!);
+                }
+              } else {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(
+                    content:
+                        const Text('Please select language first and retry'),
+                    backgroundColor: Colors.red.shade700,
+                  ),
+                );
               }
             },
             decoration:
