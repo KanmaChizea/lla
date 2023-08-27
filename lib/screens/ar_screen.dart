@@ -1,6 +1,8 @@
 import 'package:arcore_flutter_plugin/arcore_flutter_plugin.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:lla/styles/spacing.dart';
+import 'package:lla/styles/textstyles.dart';
 import 'package:vector_math/vector_math_64.dart';
 
 class ArScreen extends ConsumerStatefulWidget {
@@ -64,9 +66,30 @@ class _ArScreenState extends ConsumerState<ArScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return ArCoreView(
-      onArCoreViewCreated: onArCoreViewCreated,
-      enableTapRecognizer: true,
+    return Scaffold(
+      appBar: AppBar(
+        leading: IconButton(
+          icon: const Icon(Icons.close),
+          onPressed: () => Navigator.pop(context),
+        ),
+      ),
+      body: Column(
+        children: [
+          Padding(
+            padding: AppSpacing.appPadding.copyWith(top: 0),
+            child: const Text(
+              'Ensure your surroundings are well-lit. Tap the screen and move your phone for the app to detect a plane. The plane will be represented by a cluster of bubbles. Tap the plane, wait a bit, and see your AR object come to life!',
+              style: AppTextstyles.caption,
+            ),
+          ),
+          Expanded(
+            child: ArCoreView(
+              onArCoreViewCreated: onArCoreViewCreated,
+              enableTapRecognizer: true,
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

@@ -11,18 +11,21 @@ class TaskCard extends StatelessWidget {
     required this.title,
     required this.onPressed,
     required this.color,
+    this.padding,
   });
 
   final String image;
   final String title;
   final Function() onPressed;
   final Color color;
+  final EdgeInsets? padding;
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: onPressed,
       child: Container(
+        padding: padding,
         decoration: const BoxDecoration(
           color: AppColors.glass,
           borderRadius: BorderRadius.all(

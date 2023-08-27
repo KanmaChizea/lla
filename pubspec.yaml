@@ -39,3 +39,4 @@ flutter:
     - assets/images/
     - assets/icons/
     - questions.json
+    - classroom.json

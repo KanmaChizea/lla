@@ -1,22 +1,144 @@
 {
     "questions":[
         {
-       "question":"What is this animal commonly referred to as?",
-       "answer":"Duck",
-       "options":["Fish", "Girrafe", "Duck", "Swan"],
-       "arImage":"https://github.com/KhronosGroup/glTF-Sample-Models/blob/master/1.0/Duck/glTF/Duck.gltf"
-    },
-        {
-       "question":"Identify this object?",
-       "answer":"Box",
-       "options":["Box", "Container", "Komkom", "Bucket"],
-       "arImage":"https://github.com/KhronosGroup/glTF-Sample-Models/blob/master/1.0/Box/glTF/Box.gltf"
-    },
-        {
-       "question":"What fruit is this?",
-       "answer":"Avocado",
-       "options":["Apple", "Pear", "Banana", "Avocado"],
-       "arImage":"https://github.com/KhronosGroup/glTF-Sample-Models/blob/master/1.0/Avocado/glTF/Avocado.gltf"
+       "question":"Engage your AR senses! Can you recognize the virtual object in front of you?",
+       "answer":{
+        "Hausa":"Tafiyar",
+        "Igbo":"Akwa",
+        "Yoruba":"Asọ"
     }
-]
-}
+       ,
+       "options": {
+        "Igbo":["Ịwụ","Akwa","Akpụkpọ ụkwụ","Oche"],
+        "Hausa":["Takalma","Guga","Kujera","Tafiyar"],
+        "Yoruba":["Asọ","Garawa","Bata","Alaga"]
+       },
+       "arImage":"https://github.com/KhronosGroup/glTF-Sample-Assets/blob/main/Models/SheenCloth/glTF/SheenCloth.gltf"
+    },
+        {
+       "question":" What virtual object are you seeing?",
+       "answer":{
+        "Hausa":"Kujera",
+        "Igbo":"Oche",
+        "Yoruba":"Ijoko"
+    },
+       "options":{
+        "Igbo":["Ụlọ","Oche","Okpokoro","Oghere"],
+        "Hausa":["Soket","Tebur","Gida","Kujera"],
+        "Yoruba":["Ile","Iho","Tabili","Ijoko"]
+       },
+       "arImage":"https://github.com/KhronosGroup/glTF-Sample-Assets/blob/main/Models/SheenChair/glTF/SheenChair.gltf"
+    },
+        {
+       "question":" What animal is this?",
+       "answer":{
+        "Hausa":"Kwarya",
+        "Igbo":"Azụ",
+        "Yoruba":"Ẹja"
+    },
+       "options":{
+        "Igbo":["Nkịta","Nwamba","Ezi","Azụ"],
+        "Hausa":["Kare","Alade","Muzuru","Kwarya"],
+        "Yoruba":["Ẹja","Ologbo","Ẹlẹdẹ","Aja"]
+       },
+       "arImage":"https://github.com/KhronosGroup/glTF-Sample-Assets/blob/main/Models/BarramundiFish/glTF/BarramundiFish.gltf"
+    },
+        {
+       "question":" What is this called?",
+       "answer":{
+        "Hausa":"Fure",
+        "Igbo":"Ifuru",
+        "Yoruba":"Ododo"
+    },
+       "options":{
+        "Igbo":["Ifuru","Azụ","Iko","Oriọna"],
+        "Hausa":["Kuskure","Soket","Fure","Muzuru"],
+        "Yoruba":["Aja","Iho","Tabili","Ododo"]
+       },
+       "arImage":"https://github.com/KhronosGroup/glTF-Sample-Assets/blob/main/Models/GlassVaseFlowers/glTF/GlassVaseFlowers.gltf"
+    },
+        {
+       "question":"Tell us, what is the AR object you're currently seeing?",
+       "answer":{
+        "Hausa":"Tofa",
+        "Igbo":"Bọọlụ",
+        "Yoruba":"Boolu"
+    },
+       "options":{
+        "Igbo":["Bọọlụ","Okpokoro","Oriọna","Oghere"],
+        "Hausa":["Tebur","Kwarya","Tofa","Gida"],
+        "Yoruba":["Ẹja","Ẹlẹdẹ","Boolu","Iho"]
+       },
+       "arImage":"https://github.com/KhronosGroup/glTF-Sample-Assets/blob/main/Models/ClearCoatCarPaint/glTF/ClearCoatCarPaint.gltf"
+    },
+        {
+       "question":" Identify the AR object",
+       "answer":{
+        "Hausa":"Kuskure",
+        "Igbo":"Oriọna",
+        "Yoruba":"Atupa"
+    },
+       "options":{
+        "Igbo":["Oriọna","Azụ","Iko","Ezi"],
+        "Hausa":["Tofa","Soket","Kuskure","Muzuru"],
+        "Yoruba":["Aja","Iho","Tabili","Atupa"]
+       },
+       "arImage":"https://github.com/KhronosGroup/glTF-Sample-Assets/blob/main/Models/LightsPunctualLamp/glTF/LightsPunctualLamp.gltf"
+    },
+        {
+       "question":" Identify this AR object",
+       "answer":{
+        "Hausa":"Gilashin",
+        "Igbo":"Iko",
+        "Yoruba":"Gilasi"
+    },
+       "options":{
+        "Igbo":["Nkịta","Bọọlụ","Iko","Nwamba"],
+        "Hausa":["Tebur","Gilashin","Gida","Gwaggo"],
+        "Yoruba":["Ẹlẹdẹ","Gilasi","Aja","Ododo"]
+       },
+       "arImage":"https://github.com/KhronosGroup/glTF-Sample-Assets/blob/main/Models/GlassBrokenWindow/glTF/GlassBrokenWindow.gltf"
+    },
+        {
+       "question":"What is represented in the AR object",
+       "answer":{
+        "Hausa":"Gwaggo",
+        "Igbo":"Obọgwụ",
+        "Yoruba":"Pẹpẹyẹ"
+    },
+       "options":{
+        "Igbo":["Bọọlụ","Azụ","Okpokoro","Obọgwụ"],
+        "Hausa":["Tofa","Soket","Gwaggo","Alade"],
+        "Yoruba":["Ẹja","Tabili","Pẹpẹyẹ","Boolu"]
+       },
+       "arImage":"https://github.com/KhronosGroup/glTF-Sample-Assets/blob/main/Models/Duck/glTF/Duck.gltf"
+    },
+        {
+       "question":" Identify the AR object",
+       "answer":{
+        "Hausa":"Motar",
+        "Igbo":"Ụgbọ ala",
+        "Yoruba":"Oko"
+    },
+       "options":{
+        "Igbo":["Akpati","Oghere","Ụgbọ ala","Nkịta"],
+        "Hausa":["Alade","Kuskure","Motar","Muzuru"],
+        "Yoruba":["Ile","Oko","Ologbo","Atupa"]
+       },
+       "arImage":"https://github.com/KhronosGroup/glTF-Sample-Assets/blob/main/Models/ToyCar/glTF/ToyCar.gltf"
+    },
+        {
+       "question":"Name the object you're observing in your AR environment.",
+       "answer":{
+        "Hausa":"Bako",
+        "Igbo":"Akpati",
+        "Yoruba":"Apoti"
+    },
+       "options":{
+        "Igbo":["Nwamba","Ezi","Ụlọ","Akpati"],
+        "Hausa":["Bako","Kwarya","Motar","Kare"],
+        "Yoruba":["Ile","Apoti","Ologbo","Boolu"]
+       },
+       "arImage":"https://github.com/KhronosGroup/glTF-Sample-Assets/blob/main/Models/BoxTextured/glTF/BoxTextured.gltf"
+    }
+]}

@@ -1,5 +1,4 @@
 import 'dart:convert';
-import 'dart:developer';
 
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -16,8 +15,10 @@ class QuizNotifier extends StateNotifier<QuizState> {
     _totalScore = 0;
     final jsonString = await rootBundle.loadString('questions.json');
     final decodedJson = json.decode(jsonString);
-    final quizList =
-        (decodedJson['questions'] as List).map((e) => Quiz.fromMap(e)).toList();
+    final quizList = (decodedJson['questions'] as List)
+        .map((e) => Quiz.fromMap(e, language))
+        .toList();
+    quizList.shuffle();
     state = QuizState(
         questions: quizList, language: language, currentQuestionNo: 0);
   }

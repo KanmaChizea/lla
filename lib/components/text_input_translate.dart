@@ -35,36 +35,6 @@ class _TextInputTranslatorState extends ConsumerState<TextInputTranslator> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           AppSpacing.space24,
-          const Text(
-            'English',
-            style: AppTextstyles.caption,
-          ),
-          AppSpacing.space8,
-          TextField(
-            controller: controller,
-            onChanged: (value) {
-              if (ref.read(languageProvider) != null) {
-                if (value.isEmpty) {
-                  ref.read(textTranslatorProvider.notifier).clear();
-                } else {
-                  ref
-                      .read(textTranslatorProvider.notifier)
-                      .translate(value, ref.read(languageProvider)!);
-                }
-              } else {
-                ScaffoldMessenger.of(context).showSnackBar(
-                  SnackBar(
-                    content:
-                        const Text('Please select language first and retry'),
-                    backgroundColor: Colors.red.shade700,
-                  ),
-                );
-              }
-            },
-            decoration:
-                const InputDecoration(hintText: 'Type in some text here'),
-          ),
-          AppSpacing.space24,
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -101,7 +71,37 @@ class _TextInputTranslatorState extends ConsumerState<TextInputTranslator> {
                   icon: const Icon(Icons.refresh))
             ],
           ),
+          AppSpacing.space24,
+          const Text(
+            'English',
+            style: AppTextstyles.caption,
+          ),
           AppSpacing.space8,
+          TextField(
+            controller: controller,
+            onChanged: (value) {
+              if (ref.read(languageProvider) != null) {
+                if (value.isEmpty) {
+                  ref.read(textTranslatorProvider.notifier).clear();
+                } else {
+                  ref
+                      .read(textTranslatorProvider.notifier)
+                      .translate(value, ref.read(languageProvider)!);
+                }
+              } else {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(
+                    content:
+                        const Text('Please select language first and retry'),
+                    backgroundColor: Colors.red.shade700,
+                  ),
+                );
+              }
+            },
+            decoration:
+                const InputDecoration(hintText: 'Type in some text here'),
+          ),
+          AppSpacing.space24,
           ref.watch(textTranslatorProvider).isNotEmpty
               ? Text(
                   ref.watch(textTranslatorProvider),

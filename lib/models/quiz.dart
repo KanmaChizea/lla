@@ -1,6 +1,3 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
-import 'dart:convert';
-
 import 'package:flutter/foundation.dart';
 
 class Quiz {
@@ -33,32 +30,17 @@ class Quiz {
     );
   }
 
-  Map<String, dynamic> toMap() {
-    return <String, dynamic>{
-      'question': question,
-      'answer': answer,
-      'options': options,
-      'selectedOption': selectedOption,
-      'arImage': arImage,
-    };
-  }
-
-  factory Quiz.fromMap(Map<String, dynamic> map) {
+  factory Quiz.fromMap(Map<String, dynamic> map, String language) {
     return Quiz(
       question: map['question'] as String,
-      answer: map['answer'] as String,
-      options: List<String>.from((map['options'] as List)),
+      answer: Map<String, String>.from(map['answer'])[language] as String,
+      options: List<String>.from((map['options'][language] as List)),
       selectedOption: map['selectedOption'] != null
           ? map['selectedOption'] as String
           : null,
       arImage: map['arImage'] as String,
     );
   }
-
-  String toJson() => json.encode(toMap());
-
-  factory Quiz.fromJson(String source) =>
-      Quiz.fromMap(json.decode(source) as Map<String, dynamic>);
 
   @override
   String toString() {

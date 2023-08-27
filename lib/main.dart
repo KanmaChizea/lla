@@ -5,6 +5,8 @@ import 'package:lla/screens/ar_screen.dart';
 import 'package:lla/screens/class.dart';
 import 'package:lla/screens/edit_profile_screen.dart';
 import 'package:lla/screens/home_screen.dart';
+import 'package:lla/screens/class_intro.dart';
+import 'package:lla/screens/learning_screen.dart';
 import 'package:lla/screens/loading.dart';
 import 'package:lla/screens/profile_screen.dart';
 import 'package:lla/screens/quiz_complete.dart';
@@ -45,6 +47,8 @@ class MyApp extends ConsumerWidget {
         '/quiz_complete': (context) => const QuizComplete(),
         '/review_quiz': (context) => const ReviewQuiz(),
         '/ar_screen': (context) => const ArScreen(),
+        '/class_intro': (context) => const ClassIntroScreen(),
+        '/learning': (context) => const LearningScreen()
       },
     );
   }

@@ -10,4 +10,5 @@ class AppColors {
   static const Color purple = Color(0x8FD460D2);
   static const Color darkPurple = Color(0xFF46134F);
   static const Color glass = Color(0x2C5D5870);
+  static const Color grey = Color(0xFFA6A6A6);
 }
