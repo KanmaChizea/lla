@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:lla/models/quiz.dart';
 import 'package:lla/providers/providers.dart';
+import 'package:lla/screens/ar_screen.dart';
 import 'package:lla/styles/colors.dart';
 import 'package:lla/styles/spacing.dart';
 import 'package:lla/styles/textstyles.dart';
@@ -52,7 +53,11 @@ class _QuizQuestionState extends ConsumerState<QuizQuestion> {
           ),
           AppSpacing.space24,
           GestureDetector(
-            onTap: () => Navigator.of(context).pushNamed('/ar_screen'),
+            onTap: () => Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (context) => ArScreen(objectUrl: quiz.arImage),
+              ),
+            ),
             child: Text(
               'Tap to view image in AR',
               style: AppTextstyles.caption.copyWith(

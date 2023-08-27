@@ -6,7 +6,9 @@ import 'package:lla/styles/textstyles.dart';
 import 'package:vector_math/vector_math_64.dart';
 
 class ArScreen extends ConsumerStatefulWidget {
-  const ArScreen({super.key});
+  const ArScreen({required this.objectUrl, super.key});
+
+  final String objectUrl;
 
   @override
   ConsumerState<ConsumerStatefulWidget> createState() => _ArScreenState();
@@ -15,6 +17,13 @@ class ArScreen extends ConsumerStatefulWidget {
 class _ArScreenState extends ConsumerState<ArScreen> {
   ArCoreController? arController;
   ArCoreNode? node;
+  late String objectUrl;
+
+  @override
+  void initState() {
+    objectUrl = widget.objectUrl;
+    super.initState();
+  }
 
   void onArCoreViewCreated(ArCoreController controller) {
     arController = controller;
@@ -32,8 +41,7 @@ class _ArScreenState extends ConsumerState<ArScreen> {
 
     node = ArCoreReferenceNode(
       name: 'Toucano',
-      objectUrl:
-          "https://github.com/KhronosGroup/glTF-Sample-Models/raw/master/2.0/Duck/glTF/Duck.gltf",
+      objectUrl: objectUrl,
       position: Vector3(objectX, objectY, -1.0),
     );
     arController?.addArCoreNodeWithAnchor(node!);
@@ -42,8 +50,7 @@ class _ArScreenState extends ConsumerState<ArScreen> {
   void addObjectFromTap(ArCoreHitTestResult plane) {
     node = ArCoreReferenceNode(
       name: 'Toucano',
-      objectUrl:
-          "https://github.com/KhronosGroup/glTF-Sample-Models/raw/master/2.0/Duck/glTF/Duck.gltf",
+      objectUrl: objectUrl,
       position: plane.pose.translation,
       rotation: plane.pose.rotation,
     );

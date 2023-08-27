@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:lla/providers/providers.dart';
-import 'package:lla/screens/ar_screen.dart';
 import 'package:lla/screens/class.dart';
 import 'package:lla/screens/edit_profile_screen.dart';
 import 'package:lla/screens/home_screen.dart';
@@ -46,7 +45,6 @@ class MyApp extends ConsumerWidget {
         '/edit_profile': (context) => const EditProfileScreen(),
         '/quiz_complete': (context) => const QuizComplete(),
         '/review_quiz': (context) => const ReviewQuiz(),
-        '/ar_screen': (context) => const ArScreen(),
         '/class_intro': (context) => const ClassIntroScreen(),
         '/learning': (context) => const LearningScreen()
       },
