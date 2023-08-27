@@ -13,7 +13,7 @@
         "Hausa":["Takalma","Guga","Kujera","Tafiyar"],
         "Yoruba":["Asọ","Garawa","Bata","Alaga"]
        },
-       "arImage":"https://github.com/KhronosGroup/glTF-Sample-Assets/blob/main/Models/SheenCloth/glTF/SheenCloth.gltf"
+       "arImage":"https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/SheenCloth/glTF/SheenCloth.gltf"
     },
         {
        "question":" What virtual object are you seeing?",
@@ -27,7 +27,7 @@
         "Hausa":["Soket","Tebur","Gida","Kujera"],
         "Yoruba":["Ile","Iho","Tabili","Ijoko"]
        },
-       "arImage":"https://github.com/KhronosGroup/glTF-Sample-Assets/blob/main/Models/SheenChair/glTF/SheenChair.gltf"
+       "arImage":"https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/SheenChair/glTF/SheenChair.gltf"
     },
         {
        "question":" What animal is this?",
@@ -41,7 +41,7 @@
         "Hausa":["Kare","Alade","Muzuru","Kwarya"],
         "Yoruba":["Ẹja","Ologbo","Ẹlẹdẹ","Aja"]
        },
-       "arImage":"https://github.com/KhronosGroup/glTF-Sample-Assets/blob/main/Models/BarramundiFish/glTF/BarramundiFish.gltf"
+       "arImage":"https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/BarramundiFish/glTF/BarramundiFish.gltf"
     },
         {
        "question":" What is this called?",
@@ -55,7 +55,7 @@
         "Hausa":["Kuskure","Soket","Fure","Muzuru"],
         "Yoruba":["Aja","Iho","Tabili","Ododo"]
        },
-       "arImage":"https://github.com/KhronosGroup/glTF-Sample-Assets/blob/main/Models/GlassVaseFlowers/glTF/GlassVaseFlowers.gltf"
+       "arImage":"https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/GlassVaseFlowers/glTF/GlassVaseFlowers.gltf"
     },
         {
        "question":"Tell us, what is the AR object you're currently seeing?",
@@ -69,7 +69,7 @@
         "Hausa":["Tebur","Kwarya","Tofa","Gida"],
         "Yoruba":["Ẹja","Ẹlẹdẹ","Boolu","Iho"]
        },
-       "arImage":"https://github.com/KhronosGroup/glTF-Sample-Assets/blob/main/Models/ClearCoatCarPaint/glTF/ClearCoatCarPaint.gltf"
+       "arImage":"https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/ClearCoatCarPaint/glTF/ClearCoatCarPaint.gltf"
     },
         {
        "question":" Identify the AR object",
@@ -83,7 +83,7 @@
         "Hausa":["Tofa","Soket","Kuskure","Muzuru"],
         "Yoruba":["Aja","Iho","Tabili","Atupa"]
        },
-       "arImage":"https://github.com/KhronosGroup/glTF-Sample-Assets/blob/main/Models/LightsPunctualLamp/glTF/LightsPunctualLamp.gltf"
+       "arImage":"https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/LightsPunctualLamp/glTF/LightsPunctualLamp.gltf"
     },
         {
        "question":" Identify this AR object",
@@ -97,7 +97,7 @@
         "Hausa":["Tebur","Gilashin","Gida","Gwaggo"],
         "Yoruba":["Ẹlẹdẹ","Gilasi","Aja","Ododo"]
        },
-       "arImage":"https://github.com/KhronosGroup/glTF-Sample-Assets/blob/main/Models/GlassBrokenWindow/glTF/GlassBrokenWindow.gltf"
+       "arImage":"https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/GlassBrokenWindow/glTF/GlassBrokenWindow.gltf"
     },
         {
        "question":"What is represented in the AR object",
@@ -111,7 +111,7 @@
         "Hausa":["Tofa","Soket","Gwaggo","Alade"],
         "Yoruba":["Ẹja","Tabili","Pẹpẹyẹ","Boolu"]
        },
-       "arImage":"https://github.com/KhronosGroup/glTF-Sample-Assets/blob/main/Models/Duck/glTF/Duck.gltf"
+       "arImage":"https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/Duck/glTF/Duck.gltf"
     },
         {
        "question":" Identify the AR object",
@@ -125,7 +125,7 @@
         "Hausa":["Alade","Kuskure","Motar","Muzuru"],
         "Yoruba":["Ile","Oko","Ologbo","Atupa"]
        },
-       "arImage":"https://github.com/KhronosGroup/glTF-Sample-Assets/blob/main/Models/ToyCar/glTF/ToyCar.gltf"
+       "arImage":"https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/ToyCar/glTF/ToyCar.gltf"
     },
         {
        "question":"Name the object you're observing in your AR environment.",
@@ -139,6 +139,6 @@
         "Hausa":["Bako","Kwarya","Motar","Kare"],
         "Yoruba":["Ile","Apoti","Ologbo","Boolu"]
        },
-       "arImage":"https://github.com/KhronosGroup/glTF-Sample-Assets/blob/main/Models/BoxTextured/glTF/BoxTextured.gltf"
+       "arImage":"https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/BoxTextured/glTF/BoxTextured.gltf"
     }
 ]}
