@@ -1,16 +1,59 @@
-# lla
+# LLA - Nigerian Language Learning App
 
-A new Flutter project.
+LLA (Local Language App) is a mobile application built using Flutter that aims to make learning Nigerian local languages engaging and interactive. Whether you're a beginner or looking to refine your language skills, LLA has a variety of features to help you achieve your language learning goals.
+
+## Features
+
+### Classroom Feature
+
+- Dive into the immersive classroom environment where you can learn various Nigerian local languages.
+- Interactive lessons designed to enhance your language learning experience.
+- Engaging content to help you understand and master the intricacies of the languages.
+
+### Quiz Feature with Augmented Reality
+
+- Test your progress and knowledge with the quiz feature.
+- Integrated augmented reality for an innovative and exciting quiz experience.
+- Identify objects through AR and answer language-related questions for a holistic learning approach.
+
+### Translation Feature
+
+- Two translation sections to facilitate language understanding.
+- Translate from inputted text to Nigerian local languages.
+- Translate from images taken from the camera or gallery using Google's machine learning vision.
+- Detect text from images and translate it into your selected language.
+
+### Login Functionality
+
+- User-friendly login process to personalize your learning journey.
+- Secure and convenient access to your progress and preferences.
+
+### Dark Mode
+
+- Switch between light and dark modes for optimal viewing comfort.
+- Tailor your app's appearance to your preference.
+
+## Technologies Used
+
+- Flutter: Building cross-platform apps with a single codebase.
+- Riverpod: State management for efficient and flexible app control.
+- Shared Preferences: Caching user preferences for seamless navigation.
+- Google Machine Learning Vision: Detecting and translating text from images.
+- Augmented Reality: Enhancing the quiz experience with interactive AR elements.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+1. Clone the repository to your local machine.
+2. Make sure you have Flutter installed and set up.
+3. Run `flutter pub get` to install the required dependencies.
+4. Use `flutter run` to launch the app on your preferred device or emulator.
 
-A few resources to get you started if this is your first Flutter project:
+## Contributing
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Contributions are welcome! If you find a bug, have an idea for an improvement, or want to add new features, feel free to open an issue or submit a pull request.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## License
+
+LLA is released under the [MIT License](LICENSE). Feel free to use, modify, and distribute the code.
+
+Happy language learning with LLA! 🌍📚🎓
