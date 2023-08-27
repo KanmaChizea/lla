@@ -52,8 +52,11 @@ LLA (Local Language App) is a mobile application built using Flutter that aims t
 
 Contributions are welcome! If you find a bug, have an idea for an improvement, or want to add new features, feel free to open an issue or submit a pull request.
 
-## License
+## Screenshots
+![Screenshot_1693175766](https://github.com/KanmaChizea/lla/assets/91393087/b7798337-3a36-481b-85f9-5dc44912253d)
+![Screenshot_1693175675](https://github.com/KanmaChizea/lla/assets/91393087/d4d9e11a-0880-4c30-bdbb-5f9803a9cdde)
+![Screenshot_1693175726](https://github.com/KanmaChizea/lla/assets/91393087/531393bf-d2c6-4f3d-b534-7c6974f317d4)
+![Screenshot_1693175736](https://github.com/KanmaChizea/lla/assets/91393087/c1759364-ed46-4056-bfea-863c9d0b1a65)
 
-LLA is released under the [MIT License](LICENSE). Feel free to use, modify, and distribute the code.
 
 Happy language learning with LLA! 🌍📚🎓
